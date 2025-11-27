@@ -16,6 +16,7 @@ int main(void) //프로그램을 실행하는 main 함수
     printf("baseball : %d %d %d\n", ball[0], ball[1], ball[2]); //ball의 랜덤값 출력
 
     //3개의 숫자를 입력
+    while(1) {
     int input[3];
     printf("Enter the first number: "); //""안에 문구 출력
     scanf("%d", &input[0]); //본인이 입력한 값을 읽음
@@ -28,6 +29,7 @@ int main(void) //프로그램을 실행하는 main 함수
 
     printf("input : %d %d %d\n", input[0], input[1], input[2]); //본인이 입력한 값을 출력 
 
+   
     int strike = 0; //strike에 대한 값 지정
     int ballcount = 0; //ballcount에 대한 값 지정
     int outcount = 3;  //outcount에 대한 값 지정
@@ -82,11 +84,15 @@ int main(void) //프로그램을 실행하는 main 함수
      if( ball[0] == input[0] && ball[1] == input[1] && ball[2] == input[2] ) // 값이 전부 맞다면 home run 출력
     { //if문 시작
 	    printf("Home Run~\n"); //home run 출력
-    } //if문 끝
+       return 0;
+      } //if문 끝
 
+    
     else // 아니라면 각각의 값을 출력
     {
         printf("%d Strike, %d Ball, %d Out\n", strike, ballcount, outcount) ; //strike값과 ball, out 값을 출력
-    }
-    return 0; //끝
-} //main문 종료
+    }  
+    
+   }
+   return 0;
+   } //main문 종료

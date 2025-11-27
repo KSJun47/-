@@ -1,6 +1,6 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+#include <stdio.h> //printf, scanf를 사용하기 위해 헤더 추가
+#include <stdlib.h> // rand, srand를 사용하기 위해 헤더 추가
+#include <time.h> //time함수를 사용하기 위해 헤더 추가
 
 int main(void) //프로그램을 실행하는 main 함수
 {              // main함수 시작
@@ -16,8 +16,8 @@ int main(void) //프로그램을 실행하는 main 함수
     printf("baseball : %d %d %d\n", ball[0], ball[1], ball[2]); //ball의 랜덤값 출력
 
     //3개의 숫자를 입력
-    while(1) {
-    int input[3];
+    while(1) { //반복시작
+    int input[3]; //숫자 3개를 부여
     printf("Enter the first number: "); //""안에 문구 출력
     scanf("%d", &input[0]); //본인이 입력한 값을 읽음
 
@@ -40,37 +40,37 @@ int main(void) //프로그램을 실행하는 main 함수
         outcount = outcount - 1 ;  //같을시 outcount 1 차감
     } //if문 끝
 
-    if( ball[1] == input[1] )
+    if( ball[1] == input[1] ) //ball[1]과 input[1]이 같을때
     { //if문 시작
         strike = strike + 1 ;  //입력값이 같을시 strike에 1을 더함
         outcount = outcount - 1 ; //같을시 outcount 1 차감
     } //if문 끝
-    if( ball[2] == input[2] )
+    if( ball[2] == input[2] ) //ball[2]과 input[2]이 같을때
     { //if문 시작
         strike = strike + 1 ;  //입력값이 같을시 strike에 1을 더함
         outcount = outcount - 1 ; //같을시 outcount 1 차감
     } //if문 끝
-     if( ball [0] == input [1] ) 
+     if( ball [0] == input [1] ) //ball[0]과 input[1]이 같을때
      { //if문 시작
         ballcount = ballcount + 1 ; //입력값이 값과 같을시 ballcount 1추가
         outcount = outcount - 1 ; //같을시 outcount 1 차감
      } //if문 끝
-    if( ball [0] == input [2] ) 
+    if( ball [0] == input [2] ) //ball[0]과 input[2]이 같을때
      { //if문 시작
         ballcount = ballcount + 1 ; //입력값이 값과 같을시 ballcount 1추가
         outcount = outcount - 1 ; //같을시 outcount 1 차감
      } //if문 끝
-     if( ball [1] == input [0] ) 
+     if( ball [1] == input [0] ) //ball[1]과 input[0]이 같을때
      { //if문 시작
         ballcount = ballcount + 1 ; //입력값이 값과 같을시 ballcount 1추가
         outcount = outcount - 1 ; //같을시 outcount 1 차감
      } //if문 끝
-     if( ball [1] == input [2] ) 
+     if( ball [1] == input [2] ) //ball[1]과 input[2]이 같을때
      { //if문 시작
         ballcount = ballcount + 1 ; //입력값이 값과 같을시 ballcount 1추가
         outcount = outcount - 1 ; //같을시 outcount 1 차감
      } //if문 끝
-     if( ball [2] == input [0] ) 
+     if( ball [2] == input [0] ) //ball[2]과 input[0]이 같을때
      { //if문 시작
         ballcount = ballcount + 1 ; //입력값이 값과 같을시 ballcount 1추가
         outcount = outcount - 1 ; //같을시 outcount 1 차감
@@ -84,15 +84,15 @@ int main(void) //프로그램을 실행하는 main 함수
      if( ball[0] == input[0] && ball[1] == input[1] && ball[2] == input[2] ) // 값이 전부 맞다면 home run 출력
     { //if문 시작
 	    printf("Home Run~\n"); //home run 출력
-       return 0;
+       return 0; //여기서 마침
       } //if문 끝
 
     
     else // 아니라면 각각의 값을 출력
-    {
+    { //else문 시작
         printf("%d Strike, %d Ball, %d Out\n", strike, ballcount, outcount) ; //strike값과 ball, out 값을 출력
-    }  
+    }  //else문 종료
     
-   }
+   } //반복문 종료
    return 0;
    } //main문 종료

@@ -94,5 +94,5 @@ int main(void) //프로그램을 실행하는 main 함수
     }  //else문 종료
     
    } //반복문 종료
-   return 0;
+   return 0; //종료
    } //main문 종료

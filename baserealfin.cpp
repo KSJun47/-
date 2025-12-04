@@ -24,7 +24,7 @@ int main(void)      //프로그램을 실행하는 main 함수
     clock_t start, end; //시간 시작과종료 설정
     start = clock(); // 게임 시작 시간 기록
 
-    while (1) {
+    while (1) {   //반복문시작
         printf("\n숫자 3개를 입력하세요 (공백으로 구분): "); //입력한 숫자 출력
         scanf("%d %d %d", &input[0], &input[1], &input[2]); //입력한 숫자 분석
 
@@ -32,13 +32,13 @@ int main(void)      //프로그램을 실행하는 main 함수
         ball_count = 0;  //ballcount 0으로 초기화
 
         // strike, ball 판정
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 3; i++) { //int i를 0으로 설정하고 3보다 작게 차례차례 증가
             if (input[i] == ball[i]) { //input i가 ball i와 같다면 strike count증가
-                strike_count++;
+                strike_count++; //strike 증가
             } else if (input[i] == ball[(i+1)%3] || input[i] == ball[(i+2)%3]) { //input i가 다른위치의 값과 같으면 ball count증가
-                ball_count++;
-            }
-        }
+                ball_count++;  //ball증가
+            } //if else 종료
+        }  //for종료
 
         out_count = 3 - (strike_count + ball_count); //strike와 ball을 합친숫자로 out카운트 3에서 뺌
         
